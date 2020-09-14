@@ -1,0 +1,4 @@
+# dotenv env varaible files
+.env
+dist
+node_modules/
