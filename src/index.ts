@@ -1,14 +1,21 @@
-console.log("hello");
-const name = "Jason",
-  age = 33,
-  gender = "male";
+interface Human {
+  name: string;
+  age: number;
+  gender: string;
+}
 
-const sayHello = (name: string, age: number, gender: string): string => {
-  return `hello ${name}, you are ${age}, and you are a ${gender}.`;
+const person = {
+  name: "Jason",
+  age: 33,
+  gender: "male",
+};
+
+const sayHello = (person: Human): string => {
+  return `hello ${person.name}, you are ${person.age}, and you are a ${person.gender}.`;
 };
 
 // protects number of arguments
-console.log(sayHello(name, age, gender));
+console.log(sayHello(person));
 
 // put '?' at the end of an argument to take undefined as a value.
 // gender?
