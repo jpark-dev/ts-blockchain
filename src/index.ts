@@ -1,9 +1,19 @@
+import * as CryptoJS from "crypto-js";
+
 class Block {
   public index: number;
   public hash: string;
   public prevHash: string;
   public data: string;
   public timeStamp: number;
+
+  static calcBlockhHash = (
+    index: number,
+    prevHash: string,
+    timeStamp: number,
+    data: string
+  ): string => CryptoJS.SHA256(index + prevHash + timeStamp + data).toString();
+
   constructor(
     index: number,
     hash: string,
