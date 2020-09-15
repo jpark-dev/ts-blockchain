@@ -31,8 +31,12 @@ class Block {
 
 const originalBlock = new Block(0, "202020202020202", "", "Hello", 123456);
 
-let blockChain: [Block] = [originalBlock];
+let blockChain: Block[] = [originalBlock];
 
-console.log(blockChain);
+const getBlockChain = (): Block[] => blockChain;
+
+const getLatestBlock = (): Block => blockChain[blockChain.length - 1];
+
+const getNewTimeStamp = (): number => Math.round(new Date().getTime() / 1000);
 
 export {};
