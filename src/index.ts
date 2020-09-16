@@ -39,4 +39,24 @@ const getLatestBlock = (): Block => blockChain[blockChain.length - 1];
 
 const getNewTimeStamp = (): number => Math.round(new Date().getTime() / 1000);
 
+const createNewBlock = (data: string): Block => {
+  const prevBlock: Block = getLatestBlock();
+  const newIndex: number = prevBlock.index + 1;
+  const newTimeStamp: number = getNewTimeStamp();
+  const newHash: string = Block.calcBlockhHash(
+    newIndex,
+    prevBlock.hash,
+    newTimeStamp,
+    data
+  );
+  const newBlock: Block = new Block(
+    newIndex,
+    newHash,
+    prevBlock.hash,
+    data,
+    newTimeStamp
+  );
+  return newBlock;
+};
+
 export {};
