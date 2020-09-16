@@ -63,10 +63,17 @@ const createNewBlock = (data: string): Block => {
     data,
     newTimeStamp
   );
+  addBlock(newBlock);
   return newBlock;
 };
 
-console.log(createNewBlock("hello"), createNewBlock("bye bye"));
+const getHashOfBlock = (aBlock: Block): string =>
+  Block.calcBlockhHash(
+    aBlock.index,
+    aBlock.prevHash,
+    aBlock.timeStamp,
+    aBlock.data
+  );
 
 const isBlockValid = (targetBlock: Block, prevBlock: Block): boolean => {
   if (!Block.validateStructure(targetBlock)) {
@@ -75,6 +82,17 @@ const isBlockValid = (targetBlock: Block, prevBlock: Block): boolean => {
     return false;
   } else if (prevBlock.hash !== targetBlock.prevHash) {
     return false;
-  } else if () 
+  } else if (getHashOfBlock(targetBlock) !== targetBlock.hash) {
+    return false;
+  } else {
+    return true;
+  }
 };
+
+const addBlock = (targetBlock: Block): void => {
+  if (isBlockValid(targetBlock, getLatestBlock())) {
+    blockChain.push(targetBlock);
+  }
+};
+
 export {};
