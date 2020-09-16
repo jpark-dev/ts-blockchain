@@ -95,4 +95,10 @@ const addBlock = (targetBlock: Block): void => {
   }
 };
 
+createNewBlock("second block");
+createNewBlock("third block");
+createNewBlock("forth block");
+
+console.log(blockChain);
+
 export {};
