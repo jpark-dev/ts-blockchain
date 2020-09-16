@@ -1,6 +1,8 @@
 import * as CryptoJS from "crypto-js";
 
 class Block {
+  // static methods can be called without being instantiated, and cannot be called if instantiated.
+  // can be called from another static method within the same class with 'this' keyword.
   static calcBlockhHash = (
     index: number,
     prevHash: string,
@@ -97,8 +99,8 @@ const addBlock = (targetBlock: Block): void => {
 
 createNewBlock("second block");
 createNewBlock("third block");
-createNewBlock("forth block");
+createNewBlock("fourth block");
 
-console.log(blockChain);
+console.log(getBlockChain());
 
 export {};
