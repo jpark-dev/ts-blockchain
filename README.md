@@ -6,6 +6,17 @@ Creating blockchain is not easy, it contains data that needs to be crypted, and 
 
 This is where TypeScript can play a pivotal role here, it will help developers from errors and bugs arise from data-type checks, argument numbers, return data type... it even tell developers what data should be there right after the flashing cursor on their screen!
 
+## Dependencies
+
+- JavaScript
+- TypeScript
+- NodeJS
+
+### modules
+- Tsc-watch
+- CryptoJS
+
+
 ## Project Setup Guide
 
 Clone this project to your terminal/CLI
