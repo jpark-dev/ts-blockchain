@@ -37,7 +37,7 @@ npm start
 
 ## Result
 This app will create blockchains and print them out in your terminal.
-You can play around as much as you can, by editing values and numbers.
+You can play around as much as you want, by editing values and numbers.
 
 ## Future Goals
 - Study blockcoins in depth
