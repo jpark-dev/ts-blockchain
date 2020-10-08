@@ -1,6 +1,6 @@
 # ts-blockchain
 
-This app is all about learning what blockchain is with TypeScript.
+A simple blockchain creating application written in TypeScript.
 
 Creating blockchain is not easy, it contains data that needs to be crypted, and sometimes, a multiple of data in different data type need to be serialized.
 
