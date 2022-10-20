@@ -40,7 +40,7 @@ You can play around as much as you want, by editing values and numbers.
 ## Future Goals
 
 - [x] Use class component to create a blockchain (20/Oct/2022)
-- Study blockcoins in depth
-- Create frontend app
-- Add information/description of blockchain
-- Let user to create his/her own blockchain
+- [ ] Study blockcoins in depth
+- [ ] Create frontend app
+- [ ] Add information/description of blockchain
+- [ ] Let user to create his/her own blockchain
