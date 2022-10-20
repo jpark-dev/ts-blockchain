@@ -1,6 +1,6 @@
 {
   "name": "ts-blockchain",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Learning Typescript by making a Blockchain with it.",
   "main": "index.js",
   "repository": "https://github.com/jpark-dev/ts-blockchain",
